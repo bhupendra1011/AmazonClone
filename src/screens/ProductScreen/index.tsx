@@ -5,6 +5,7 @@ import product from '../../data/product'
 import { Picker } from '@react-native-picker/picker';
 import QuantitySelector from '../../components/QuantitySelector';
 import Button from '../../components/Button';
+import ImageCarousel from '../../components/ImageCarousel';
 
 
 const ProductScreen = () => {
@@ -13,6 +14,9 @@ const ProductScreen = () => {
     return (
         <View style={styles.container}>
             <Text >{product.title}</Text>
+
+            <ImageCarousel images={product.images} />
+
             { product.options && (
                 <Picker
                     selectedValue={selectedOption}
