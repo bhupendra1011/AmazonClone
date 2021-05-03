@@ -24,7 +24,7 @@ const ProductItem = (props: ProductItemProps) => {
                 <View style={styles.ratingContainer}>
                     {new Array(5).fill(0).map((el, i) => {
                         const iconName = i < Math.floor(item.avgRating) ? 'star' : item.avgRating - i > 0 ? 'star-half-empty' : 'star-o'
-                        return (<Icon key={i} style={styles.star}
+                        return (<Icon key={`${item.id}--${i}`} style={styles.star}
                             name={iconName}
                             size={20}
                             color="#e47911" />
