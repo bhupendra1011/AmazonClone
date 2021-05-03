@@ -2,7 +2,7 @@ import React from 'react'
 import { FlatList, Image, StyleSheet, Text, useWindowDimensions, View } from 'react-native'
 
 interface ImageCarouselProps {
-    images: [string]
+    images: string[]
 }
 
 const ImageCarousel = ({ images }: ImageCarouselProps) => {
