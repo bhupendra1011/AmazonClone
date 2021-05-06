@@ -9,9 +9,11 @@
  */
 
 import React from 'react';
-import { SafeAreaView, StatusBar, useColorScheme } from 'react-native';
+import { SafeAreaView, StatusBar, useColorScheme, View } from 'react-native';
+import 'react-native-gesture-handler';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
+import Router from './src/router';
 import AddressScreen from './src/screens/AddressScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import ProductScreen from './src/screens/ProductScreen';
@@ -22,16 +24,18 @@ const App = () => {
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    flex: 1
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <View style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       {/* <HomeScreen /> */}
       {/* <ShoppingCartScreen /> */}
       {/* <ProductScreen /> */}
-      <AddressScreen />
-    </SafeAreaView>
+      {/* <AddressScreen /> */}
+      <Router />
+    </View>
   );
 };
 

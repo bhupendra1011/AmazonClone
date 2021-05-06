@@ -1,6 +1,7 @@
 import React from 'react'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import product from '../../data/product'
+import { useRoute } from "@react-navigation/native"
 
 import { Picker } from '@react-native-picker/picker';
 import QuantitySelector from '../../components/QuantitySelector';
@@ -8,9 +9,13 @@ import Button from '../../components/Button';
 import ImageCarousel from '../../components/ImageCarousel';
 
 
+
+
 const ProductScreen = () => {
     const [selectedOption, setSelectedOption] = React.useState(product.options ? product.options[0] : '');
-    const [quantity, setQuantity] = React.useState(1)
+    const [quantity, setQuantity] = React.useState(1);
+    const route = useRoute();
+    console.log(route.params) // now this can be queried form GraphQL .
     return (
         <ScrollView style={styles.container}>
             <Text >{product.title}</Text>
