@@ -33,7 +33,7 @@ const HomeStackNav = () => {
     const [searchValue, setSearchValue] = React.useState('')
     return (
         <Stack.Navigator screenOptions={{ header: () => <HeaderComponent searchValue={searchValue} setSearchValue={setSearchValue} /> }} >
-            <Stack.Screen name="HomeScreen" options={{ title: "Home" }} >
+            <Stack.Screen name="HomeScreen"  >
                 {() => <HomeScreen searchValue={searchValue} />}
             </Stack.Screen>
             <Stack.Screen name="ProductDetailsScreen" component={ProductScreen} options={{ title: "Product Details" }} />

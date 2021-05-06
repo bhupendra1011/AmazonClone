@@ -12,7 +12,7 @@ const CartStackNav = () => {
     return (
         <Stack.Navigator >
             <Stack.Screen name="CartScreen" component={ShoppingCartScreen} options={{ title: "Your Cart" }} />
-            <Stack.Screen name="AddressScreen" component={HomeScreen} options={{ title: "Your Address" }} />
+            <Stack.Screen name="AddressScreen" component={AddressScreen} options={{ title: "Your Address" }} />
         </Stack.Navigator>
 
     )
