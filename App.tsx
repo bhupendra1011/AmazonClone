@@ -18,6 +18,10 @@ import AddressScreen from './src/screens/AddressScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import ProductScreen from './src/screens/ProductScreen';
 import ShoppingCartScreen from './src/screens/ShoppingCartScreen';
+import Amplify from 'aws-amplify'
+import config from './src/aws-exports'
+
+Amplify.configure(config)
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
